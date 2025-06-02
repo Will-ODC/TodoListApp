@@ -13,6 +13,14 @@ A feature-rich todo list application built with React, Vite, and Tailwind CSS.
 - 💾 **Local Storage**: Todos persist between sessions
 - 🎨 **Responsive Design**: Clean UI with Tailwind CSS
 
+## Screenshots
+
+### Main View
+![Main View](./screenshots/main-view.png)
+
+### Drag and Drop
+![Drag and Drop](./screenshots/drag-and-drop.png)
+
 ## Getting Started
 
 ### Prerequisites
