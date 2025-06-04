@@ -29,15 +29,18 @@ A feature-rich todo list application built with React, Vite, and Tailwind CSS.
 
 ### Installation
 
-1. Navigate to the project directory:
+1. Clone the repository:
 ```bash
-cd /mnt/c/Users/wjexc/OneDrive/Desktop/todolistapp
+git clone <repository-url>
+cd TodoListApp
 ```
 
 2. Install dependencies:
 ```bash
-npm install --no-bin-links
+npm install
 ```
+
+Note: If you encounter issues on Windows/WSL, you may need to use `npm install --no-bin-links`
 
 ### Running the App
 
@@ -63,16 +66,18 @@ The app will be available at `http://localhost:5173`
 ## Project Structure
 
 ```
-todolistapp/
-├── node_modules/
 ├── src/
 │   ├── components/
-│   │   └── SortableItem.jsx    # Drag-and-drop wrapper component
-│   ├── App.jsx                  # Main application component
-│   ├── main.jsx                 # React entry point
-│   └── index.css                # Tailwind CSS imports
-├── index.html                   # HTML entry point
-├── package.json                 # Dependencies and scripts
+│   │   ├── Todo/               # Todo-related components
+│   │   └── SortableItem.jsx    # Drag-and-drop wrapper
+│   ├── hooks/                  # Custom React hooks
+│   ├── utils/                  # Utility functions
+│   ├── constants/              # App constants
+│   ├── App.jsx                 # Main application component
+│   ├── main.jsx                # React entry point
+│   └── index.css               # Tailwind CSS imports
+├── index.html                  # HTML entry point
+├── package.json                # Dependencies and scripts
 ├── vite.config.js              # Vite configuration
 ├── tailwind.config.js          # Tailwind configuration
 ├── postcss.config.js           # PostCSS configuration
@@ -88,10 +93,17 @@ todolistapp/
 - **date-fns**: Date formatting
 - **Local Storage API**: Data persistence
 
-## Known Issues Resolved
+## Building for Production
 
-- Drag handlers were initially preventing button clicks - fixed by applying drag listeners only to specific areas
-- Package installation requires `--no-bin-links` flag on some systems
+```bash
+npm run build
+```
+
+The production-ready files will be in the `dist` directory.
+
+## Deployment
+
+This app is configured for deployment on Netlify. Simply connect your GitHub repository to Netlify for automatic deployments.
 
 ## Future Enhancements
 
